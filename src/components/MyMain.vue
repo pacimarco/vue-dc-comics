@@ -57,6 +57,19 @@ data(){
     color: white;
     padding-left: 180px;
 }
-
+.section-2{
+    background-color: rgb(12,105,247);
+    display: flex;
+    font-size: 11px;
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+    line-height: 150px;
+    color: white;
+    
+    .main-menu{
+        padding: 0 20px;
+    }
+}
 
 </style>
