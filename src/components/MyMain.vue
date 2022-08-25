@@ -1,13 +1,16 @@
 <template>
   <main>
       <section class="section-1">
-          <h3>--> Content goes here --></h3>
+          
+          <div class="jambo">
+
+          </div>
           <div class="container comics-list">
               <div v-for="(card, index) in comicsList" :key="index"   class="comics-card">
-                  <img :src="comicsList.thumb" alt="">
-              <h3 class="title-comics">{{comicsList.series}}</h3>
+                  <img :src="card.thumb" alt="">
+              <h3 class="title-comics">{{card.series}}</h3>
               </div>
-              
+              <a href="#" class="load-more">LOAD MORE</a>
           </div>
       </section>
 
@@ -134,13 +137,30 @@ data(){
 .section-1{
     background-color: black;
     height: 630px;
-    line-height: 130px;
+    
     color: white;
-    padding-left: 180px;
+
+    a{
+        
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(12,105,247);
+        margin:auto;
+        
+    }
+   
 
     .comics-list{
         display: flex;
         flex-wrap: wrap;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 30px;
     }
 }
 .section-2{
@@ -171,11 +191,27 @@ data(){
     }
 }
 .comics-card{
-    flex-basis: 15%;
+    width: calc(100%/6);
+    height: 150px;
 
     img{
-        max-width: 100%;
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+       
+        
+    }
+    h3{
+        font-size: 10px;
+        height: 30px;
     }
 }
+.jambo{
+    
+        height: 15rem;
+        background-image: url('../assets/img/jumbotron.jpg');
+        background-size: cover;
+}
+
 
 </style>
