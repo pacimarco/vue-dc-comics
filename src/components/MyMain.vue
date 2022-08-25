@@ -24,23 +24,23 @@ data(){
     return{
         menu:[
             {
-                src: '../assets/img/buy-comics-digital-comics.png',
+                src: require('../assets/img/buy-comics-digital-comics.png'),
                 text: 'DIGITAL COMICS',
             },
             {
-                src: '../assets/img/buy-comics-merchandise.png',
+                src: require('../assets/img/buy-comics-merchandise.png'),
                 text: 'DC MERCHANDISE',
             },
             {
-                src: '../assets/img/buy-comics-subscription.png',
+                src: require('../assets/img/buy-comics-subscriptions.png'),
                 text: 'SUBSCRIPTION',
             },
             {
-                src: '../assets/img/buy-comics-shop-locator.png',
+                src: require('../assets/img/buy-comics-shop-locator.png'),
                 text: 'COMICS SHOP LOCATOR',
             },
             {
-                src: '../assets/img/buy-dc-power-visa.svg',
+                src: require('../assets/img/buy-dc-power-visa.svg'),
                 text: 'DC POWER VISA',
             }
         ]
@@ -68,7 +68,20 @@ data(){
     color: white;
     
     .main-menu{
-        padding: 0 20px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        
+        
+        
+    }
+
+    img{
+        width: 35px;
+        margin: 10px;
+       
+        
+        
     }
 }
 

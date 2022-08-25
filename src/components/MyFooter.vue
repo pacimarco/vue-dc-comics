@@ -46,16 +46,54 @@
         </div>
         <img class="logo-footer" src="../assets/img/dc-logo-bg.png" alt="">
     </div>
-
+    
     <div class="bottom-footer">
-
+        <div class="sign-up">
+            <button>SIGN-UP NOW</button>
+        </div>
+        <div class="app">
+            <h4>FOLLOW US</h4>
+            <ul>
+                <li v-for="(app, index) in app" :key="index">
+                    <a :href="app.at">
+                    <img :src="app.src" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </footer>
 </template>
 
 <script>
 export default {
-name: 'MyFooter'
+name: 'MyFooter',
+data(){
+    return{
+        app:[
+            {
+                src: require('../assets/img/footer-facebook.png'),
+                at: '#',
+            },
+            {
+                src: require('../assets/img/footer-twitter.png'),
+                at: '#',
+            },
+            {
+                src: require('../assets/img/footer-youtube.png'),
+                at: '#',
+            },
+            {
+                src: require('../assets/img/footer-pinterest.png'),
+                at: '#',
+            },
+            {
+                src: require('../assets/img/footer-periscope.png'),
+                at: '#',
+            }
+        ]
+    }
+}
 }
 </script>
 
@@ -87,6 +125,52 @@ name: 'MyFooter'
     }
     .logo-footer{
         margin-left: 150px;
+    }
+}
+.bottom-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    background-color: rgb(42, 42, 48);
+
+    button{
+    color:white;
+     background-color: rgb(42, 42, 48);
+     padding: 10px;
+     border: 2px solid rgb(12,105,247);
+     margin-left: 150px;
+    }
+
+    .app{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        h4{
+            color: rgb(12,105,247);
+        }
+
+
+        ul{
+            list-style: none;
+
+            li{
+                
+                display: inline-block;
+                
+
+                a{
+                    text-decoration: none;
+                    padding:10px;
+
+                    img{
+                        width: 25px;
+                    }
+                }
+            }
+        }
     }
 }
 </style>
